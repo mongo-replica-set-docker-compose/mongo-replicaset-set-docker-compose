@@ -1,0 +1,23 @@
+{
+  "name": "mv-db-mongo",
+  "version": "1.0.0",
+  "description": "this project is an mongo replica set setup with docker compose ## Usage - Step 1 :   Use docker compose commande to start the mongo and mongo-express container ```sh $ docker-compose up ``` - Step 2 : Initialise the replicaset using the rs-init.sh ```sh $ docker exec mongo /scripts/rs-init.sh ```",
+  "main": "index.js",
+  "scripts": {
+    "start:prod_container": "docker-compose up",
+    "start:prod_container_detatch": "docker-compose up -d",
+    "stop:prod_container": "docker-compose down",
+    "replicaset:initialise": "docker exec mv-db-mongo /scripts/rs-init.sh",
+    "exec:terminal": "docker exec -it mv-db-mongo /bin/bash"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mongo-replica-set-docker-compose/mongo-replicaset-set-docker-compose.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mongo-replica-set-docker-compose/mongo-replicaset-set-docker-compose/issues"
+  },
+  "homepage": "https://github.com/mongo-replica-set-docker-compose/mongo-replicaset-set-docker-compose#readme"
+}
